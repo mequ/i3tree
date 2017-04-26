@@ -9,6 +9,9 @@ use AnyEvent::I3;
 # receive description of the tree
 my $tree = i3->get_tree->recv;
 
+#Dont go away untile i say 
+print "Press <Enter> or <Return> to continue: ";
+my $resp = <STDIN>;
 
 walk_tree( $tree, 0 );
 
